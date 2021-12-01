@@ -53,17 +53,3 @@ Enter to container:
 ```sh 
     docker exec -it kali bash
 ```
-
-## Repository
-
-Packages download from: 
-
-```sh
-## Sources list
-deb http://http.kali.org/kali kali-rolling main non-free contrib
-deb-src http://http.kali.org/kali kali-rolling main non-free contrib
-```
-
-## Repo git
-
-- https://github.com/fcchn4/docker-kali
