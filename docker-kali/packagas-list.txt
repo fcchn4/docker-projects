@@ -1,0 +1,8 @@
+apt install -y findmyhash fierce exploitdb exiv2 enum4linux dnsrecon dnsenum dnschef dmitry cryptcat dirb dirbuster
+powersploit ncrack metasploit-framework masscan magicrescue lbd hping3 hashid hash-identifier fping
+nikto nmap creddump7 yersinia sleuthkit skipfish responder recon-ng rebind proxychains ptunnel
+sslstrip sslsplit sqlmap sslcaudit ssldump spooftooph spike sparta snmpcheck smbmap set hydra 
+webshells weevely wfuzz whatweb upx-ucl windows-binaries winexe wordlists wpscan statsprocessor 
+axel joomscan dos2unix ethtool expect git hashdeep hotpatch wafw00f voiphopper theharvester 
+netmask netsniff-ng ngrep pwnat stunnel4 swaks tcpick tcpreplay tcpdump unix-privesc-check 
+amass arp-scan arping binwalk bulk-extractor cewl clusterd commix crunch sslyze udptunnel netcat
