@@ -3,10 +3,8 @@ FROM kalilinux/kali-rolling:latest
 CMD echo "This is FCCH container for Pentesting with Kali Linux"
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update -qq && apt-get upgrade -y -qq
-
-## Packages for container base
-RUN apt-get install -y whois mlocate bash-completion curl wget vim testssl.sh \
+RUN apt-get update -qq && apt-get upgrade -y -qq \
+    && apt-get install -y whois mlocate bash-completion curl wget vim testssl.sh \
     joomscan wpscan fierce exploitdb exiv2 git dmitry dirb dirbuster \
     metasploit-framework masscan fping nikto nmap sqlmap axel ethtool \
     udptunnel enum4linux dnsrecon dnsenum dnschef cryptcat powersploit \
