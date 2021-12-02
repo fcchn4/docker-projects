@@ -8,6 +8,7 @@ RUN apt-get update -qq && apt-get upgrade -y -qq \
     zip \
     unzip \
     wget \
+    ansible \
     && wget -q -P /tmp ${TF_URL} \
     && unzip /tmp/terraform_1.0.11_linux_amd64.zip -d /usr/local/bin \
     && apt clean \
