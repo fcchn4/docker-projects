@@ -15,5 +15,5 @@ RUN apt-get update -qq && apt-get upgrade -y -qq \
     hashdeep hotpatch wafw00f voiphopper theharvester netmask netsniff-ng ngrep \
     pwnat stunnel4 swaks tcpick tcpreplay tcpdump unix-privesc-check amass \
     arp-scan arping binwalk bulk-extractor cewl commix crunch sslyze \
-    bash-completion mlocate theharvester dnsrecon netcat-traditional \
+    theharvester dnsrecon netcat-traditional \
     && apt-get autoremove -y && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
