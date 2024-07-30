@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: command-demo
+  labels:
+    purpose: demonstrate-command
+spec:
+  containers:
+    - name: pods-test
+      image: debian:12
+      env:
+        - name: MESSAGE
+          value: "Hello World!"
+      command: ["/bin/echo"]
+      args: ["$(MESSAGE)"]
+  restartPolicy: OnFailure
