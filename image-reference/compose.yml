@@ -5,7 +5,7 @@ services:
       - "8080:80"
     volumes:
       - "vue_data:/usr/share/nginx/html"
-    restart: always
+    restart: always # unless-stopped
 
   webvue:
     build: 
@@ -13,7 +13,7 @@ services:
       dockerfile: extra/Dockerfile-vue
     ports:
       - "8008:8080"
-    restart: always
+    restart: no
 
   srvuser:
     build:
@@ -21,6 +21,7 @@ services:
       dockerfile: extra/Dockerfile-user
     ports:
       - "3000:8080"
+    restart: on-failure:1 # Tipo valor máximo status code: 5
 
 volumes:
   vue_data:

@@ -22,3 +22,4 @@ $ docker run --rm -it -p 8080:80 base/vuejs:v0.0.1
 
 - [Vue Black Dashboard](https://github.com/creativetimofficial/vue-black-dashboard?tab=readme-ov-file#).
 - [Dockerfile Reference](https://docs.docker.com/reference/dockerfile/#shell).
+- [Docker Compose Reference](https://docs.docker.com/compose/gettingstarted/).
