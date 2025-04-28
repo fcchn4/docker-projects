@@ -1,0 +1,26 @@
+services:
+  webase:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - "vue_data:/usr/share/nginx/html"
+    restart: always
+
+  webvue:
+    build: 
+      context: .
+      dockerfile: extra/Dockerfile-vue
+    ports:
+      - "8008:8080"
+    restart: always
+
+  srvuser:
+    build:
+      context: .
+      dockerfile: extra/Dockerfile-user
+    ports:
+      - "3000:8080"
+
+volumes:
+  vue_data:

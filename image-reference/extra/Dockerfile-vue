@@ -1,0 +1,29 @@
+## Build Vue JS App
+FROM node:14.20.1-alpine
+
+ENV VUE_URL="https://github.com/creativetimofficial/vue-black-dashboard.git"
+WORKDIR /app
+
+RUN apk update \
+    && apk upgrade \
+    && apk add git \
+    && rm -rf /var/cache/apk \
+    && rm -rf /var/lib/apk
+
+RUN <<EOT
+    git clone ${VUE_URL}
+    cd /app/vue-black-dashboard
+    npm install
+    npm run build
+EOT
+
+COPY <<-EOT /vuerun.sh
+    cd /app/vue-black-dashboard/dist
+    npm run serve
+EOT
+
+RUN chmod +x /vuerun.sh
+
+EXPOSE 8080
+
+CMD [ "/vuerun.sh" ]
